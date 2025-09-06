@@ -2,113 +2,148 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Resume</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Resume</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
-<body>
-    <header>
-        <nav>
-            <div class="left">PrashiG</div>
-            <div class="right">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#contact">Contact Me</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <section id="home" class="firstSection fade-in">
-            <div class="leftSection">
-                Hi, My name is <span class="purple"><b>Prashila!</b></span><br>A BCA student passionate about <br>
-                <span id="element"></span>
-                <br><br>
-                <a href="Prashila Gaude_Resume.pdf" download class="download-cv-button">Download CV</a>
-            </div>
-            <div class="rightSection">
-                <img src="resumeIMG-edit.png" alt="">
-            </div>
+<body class="font-[Poppins] bg-blue-100 text-gray-800">
 
-        </section>
-        <hr>
-        <section id="about" class="secondSection fade-in">
-            <h1>About Me</h1>
-            <p>
-                I am a final-year <strong>Bachelor of Computer Applications (BCA)</strong> student with a strong passion
-                for
-                <strong>web development, UI/UX design and software engineering</strong>. Over the past few years,
-                I have worked on multiple academic and personal projects, gaining hands-on experience in
-                <strong>HTML, CSS, JavaScript, PHP, and MySQL</strong>.
-            </p><br>
-            <p>
-                I enjoy building user-friendly web applications while also exploring
-                backend technologies and design tools such as <strong>Figma</strong> and <strong>Canva</strong>.
-                My goal is to continuously improve my problem-solving skills and contribute to meaningful
-                real-world projects.
-            </p><br>
-            <p>
-                Beyond coding, I am a curious learner who enjoys <strong>collaborating in teams</strong>,
-                working with <strong>Git & GitHub</strong> for version control and adapting to
-                new technologies in the ever-changing tech landscape.
-            </p>
-        </section>
-        <hr>
-        <section class="thirdSection fade-in" id="education">
-            <h1>Education</h1>
-            <p>Bachelor of Computer Applications (BCA),<br>
-                GVM's GGPR College of Commerce and Economics, Ponda-Goa.<br>
-                Duration | 2023-2026</p>
-        </section>
-        <hr>
-        <section class="fourthSection fade-in" id="skills">
-            <h1>TECHNICAL SKILLS & TOOLS USED</h1>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <i class="fas fa-code"></i>
-                    <h3>Frontend Development</h3>
-                    <p>HTML, CSS, JavaScript</p>
-                </div>
-                <div class="skill-card">
-                    <i class="fas fa-database"></i>
-                    <h3>Backend Development</h3>
-                    <p>PHP, MySQL & phpMyAdmin</p>
-                </div>
-                <div class="skill-card">
-                    <i class="fab fa-github"></i>
-                    <h3>Version Control</h3>
-                    <p>Git & GitHub</p>
-                </div>
-                <div class="skill-card">
-                    <i class="fas fa-paint-brush"></i>
-                    <h3>UI/UX Design</h3>
-                    <p>Figma, Canva</p>
-                </div>
-            </div>
-        </section>
-        <hr>
-        <section class="fifthSection fade-in" id="contact">
-    <h1>Contact Me</h1>
-    <div class="contact-info">
-        <p><i class="fas fa-envelope"></i> Email: <a href="mailto:prashilagaude58@gmail.com">prashilagaude58@gmail.com</a></p>
-        <p><i class="fab fa-github"></i> GitHub: <a href="https://github.com/prashig" target="_blank">prashig</a></p>
+  <!-- Navbar -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <nav class="max-w-6xl mx-auto flex justify-between items-center py-4 px-6">
+      <div class="text-xl md:text-2xl font-bold text-blue-600">PrashiG</div>
+
+      <ul class="hidden md:flex space-x-6 text-gray-700 font-medium">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#contact" class="nav-link">Contact Me</a></li>
+      </ul>
+
+      <button id="menu-btn" class="block md:hidden text-2xl text-gray-700 focus:outline-none">
+        <i class="fas fa-bars"></i>
+      </button>
+    </nav>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
+      <ul class="flex flex-col space-y-4 py-4 px-6 text-gray-700 font-medium">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#contact" class="nav-link">Contact Me</a></li>
+      </ul>
     </div>
-</section>
-        <hr>
-    </main>
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-<script src="script.js"></script>
+
+  </header>
+
+  <!-- Hero Section -->
+  <section class="flex flex-col md:flex-row justify-around items-center my-12 md:my-[100px] px-6 gap-10 ">
+    <div class="animate-fadeIn text-center md:text-left text-2xl md:text-4xl w-full md:w-1/2">
+      <span class="text-2xl md:text-3xl">Hi, My name is</span> <span class="text-red-600"><b>Prashila!</b></span>
+      <br><br><span class="text-2xl md:text-3xl">A BCA student passionate about</span>
+      <span id="element"></span>
+      <br><br>
+      <a href="Prashila Gaude_Resume.pdf" download
+        class="inline-block bg-blue-600 text-lg md:text-2xl text-white px-6 py-2 rounded-lg shadow hover:bg-blue-700 transition">
+        Download CV
+      </a>
+    </div>
+    <div class="flex-shrink-0 animate-fadeIn w-2/3 sm:w-1/2 md:w-1/3">
+      <img src="resumeIMG-edit.png" alt="Profile" class="w-full rounded-lg hover:scale-105 transition-transform">
+    </div>
+  </section>
+  <hr class="border-0 h-[1.2px] bg-[rgb(50,41,59)] my-10 md:my-[40px] mx-6 md:mx-[84px]">
+
+  <!-- About Section -->
+  <section id="about" class="max-w-4xl mx-auto py-12 px-6">
+    <h2 class="section-title font-semibold mb-5 text-[2rem]">About Me</h2>
+    <p class="text-base leading-relaxed">
+      I am a final-year <strong>Bachelor of Computer Applications (BCA)</strong> student with a strong passion
+      for
+      <strong>web development, UI/UX design and software engineering</strong>. Over the past few years,
+      I have worked on multiple academic and personal projects, gaining hands-on experience in
+      <strong>HTML, CSS, JavaScript, PHP, and MySQL</strong>.
+    </p><br>
+    <p>
+      I enjoy building user-friendly web applications while also exploring
+      backend technologies and design tools such as <strong>Figma</strong> and <strong>Canva</strong>.
+      My goal is to continuously improve my problem-solving skills and contribute to meaningful
+      real-world projects.
+    </p><br>
+    <p>
+      Beyond coding, I am a curious learner who enjoys <strong>collaborating in teams</strong>,
+      working with <strong>Git & GitHub</strong> for version control and adapting to
+      new technologies in the ever-changing tech landscape.
+    </p>
+  </section>
+
+
+  <!-- Education Section -->
+  <section class="thirdSection fade-in max-w-4xl mx-auto py-12 px-6" id="education">
+    <h1 class="mb-5 text-[2rem] font-semibold">Education</h1>
+    <p>Bachelor of Computer Applications (BCA),<br>
+      GVM's GGPR College of Commerce and Economics, Ponda-Goa.<br>
+      Duration | 2023-2026</p>
+  </section>
+  <br><br>
+  <!-- Skills Section -->
+  <section class="fourthSection fade-in max-w-[90vw] mx-auto px-4" id="skills">
+    <h1 class="mb-5 text-2xl md:text-[2rem] font-semibold text-center">Skills</h1>
+    <div class="skills-grid grid grid-cols-1 sm:grid-cols-2 gap-5 mt-5">
+      <div
+        class="skill-card bg-[rgba(57,22,57,0.2)] p-5 rounded-[10px] text-center transition-all duration-300 ease-in-out shadow-md hover:-translate-y-1.5 hover:shadow-lg hover:bg-[rgba(136,92,136,0.3)]">
+        <i class="fas fa-code text-[2.5rem] mb-[15px] text-black"></i>
+        <h3 class="mb-2.5 text-[1.3rem]">Frontend Development</h3>
+        <p class="text-[0.9rem] opacity-90">HTML, CSS, JavaScript</p>
+      </div>
+      <div
+        class="skill-card bg-[rgba(57,22,57,0.2)] p-5 rounded-[10px] text-center transition-all duration-300 ease-in-out shadow-md hover:-translate-y-1.5 hover:shadow-lg hover:bg-[rgba(136,92,136,0.3)]">
+        <i class="fas fa-database text-[2.5rem] mb-[15px] text-black"></i>
+        <h3 class="mb-2.5 text-[1.3rem]">Backend Development</h3>
+        <p class="text-[0.9rem] opacity-90">PHP, MySQL & phpMyAdmin</p>
+      </div>
+      <div
+        class="skill-card bg-[rgba(57,22,57,0.2)] p-5 rounded-[10px] text-center transition-all duration-300 ease-in-out shadow-md hover:-translate-y-1.5 hover:shadow-lg hover:bg-[rgba(136,92,136,0.3)]">
+        <i class="fab fa-github text-[2.5rem] mb-[15px] text-black"></i>
+        <h3 class="mb-2.5 text-[1.3rem]">Version Control</h3>
+        <p class="text-[0.9rem] opacity-90">Git & GitHub</p>
+      </div>
+      <div
+        class="skill-card bg-[rgba(57,22,57,0.2)] p-5 rounded-[10px] text-center transition-all duration-300 ease-in-out shadow-md hover:-translate-y-1.5 hover:shadow-lg hover:bg-[rgba(136,92,136,0.3)]">
+        <i class="fas fa-paint-brush text-[2.5rem] mb-[15px] text-black"></i>
+        <h3 class="mb-2.5 text-[1.3rem]">UI/UX Design</h3>
+        <p class="text-[0.9rem] opacity-90">Figma, Canva</p>
+      </div>
+    </div>
+  </section>
+  <br>
+  <!-- Contact Section -->
+  <section id="contact" class="max-w-4xl mx-auto py-12 px-6 text-center">
+    <h2 class="section-title font-semibold">Contact Me</h2><br>
+    <p><i class="fas fa-envelope"></i> <a href="mailto:prashilagaude58@gmail.com">prashilagaude58@gmail.com</a></p>
+    <div class="flex justify-center space-x-6 mt-4 text-xl text-blue-600">
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/prashig"><i class="fab fa-github"></i></a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-100 py-4">
+  </footer>
+
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
